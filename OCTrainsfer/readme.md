@@ -12,9 +12,9 @@ you've chosen to watch.
 
 The first release is specific to Tunney's Pasture, but Hurdman and Blair are coming soon!
 
-#See all your upcoming connections at a glance
+# See all your upcoming connections at a glance
 ![Screenshot of Trips page](images/trips.jpg)
 
-#Easily select the routes you care about
+# Easily select the routes you care about
 ![Screenshot of Setup page](images/routes.jpg)
 
