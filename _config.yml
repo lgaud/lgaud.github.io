@@ -1,8 +1,13 @@
 title: Lisa Gaudette # your name (or website title) here
 #logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  My side projects live here.
+  Welcome to the home of my side projects!
   <br/>
-  <a href="https://www.linkedin.com/in/lisagaud/">View My LinkedIn Profile</a> 
+  <ul>
+  <li><a href="OCTrainsfer">OC Trainsfer App</a></li>
+  <li><a href="Projects">Other Projects</a></li>
+  <li><a href="https://www.linkedin.com/in/lisagaud/">LinkedIn Profile</a></li>
+  </ul>
 
+show_downloads: false
 theme: jekyll-theme-dinky
