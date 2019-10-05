@@ -2,6 +2,7 @@ title: Lisa Gaudette # your name (or website title) here
 #logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   My side projects live here.
+  <br/>
   <a href="https://www.linkedin.com/in/lisagaud/">View My LinkedIn Profile</a> 
 
 theme: jekyll-theme-minimal
