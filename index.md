@@ -1,7 +1,7 @@
 ### Apps
 
 ## Make transfering from the train less of a pain!
-[![OC Trainsfer Logo](images/Feature.png "OC Trainsfer")](OCtrainsfer)
+[![OC Trainsfer Logo](images/Feature.png "OC Trainsfer")](OCTrainsfer)
 
 # Misc Projects
 
