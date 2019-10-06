@@ -10,7 +10,7 @@ Open up OC Trainsfer just before arriving at the station, and it will
 call the OC Transpo GPS feed to get the next few trips for the routes 
 you've chosen to watch.
 
-Coming soon to Google Play. Sneak Preview available via [Expo](https://expo.io/@lgaud/OcTrainsfer)
+<a href='https://play.google.com/store/apps/details?id=com.lgaud.octrainsfer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
 The first release is specific to Tunney's Pasture, but Hurdman and Blair are coming soon!
 
@@ -19,4 +19,7 @@ The first release is specific to Tunney's Pasture, but Hurdman and Blair are com
 
 # Easily select the routes you care about
 ![Screenshot of Setup page](images/routes.jpg)
+
+
+Google Play and the Google Play logo are trademarks of Google LLC.
 
