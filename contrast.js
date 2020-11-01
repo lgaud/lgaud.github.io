@@ -50,7 +50,7 @@ function displayContrastMatrix(colours, contrast_matrix, element) {
     table = document.createElement("table")
     tableRow = document.createElement("tr")
     table.appendChild(tableRow)
-
+    element.innerHTML = ""
     element.appendChild(table)
     empty = document.createElement("td")
     tableRow.appendChild(empty)
