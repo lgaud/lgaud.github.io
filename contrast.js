@@ -17,34 +17,36 @@ let dsu = (arr1, arr2) => arr1
     .sort(([arg1], [arg2]) => arg2 - arg1) // sort by the args
     .map(([, item]) => item); // extract the sorted items
 
-function findHighestContrastOrder(colours, contrastMatrix) {
-    // Given the list of colours
-    // I want the ordering that maximizes the lowest contrast between adjacent pairs
-    // The contrast ratio is a property of two colours
-    // A and B have a contrast ratio, the contrast ratio of the next choice is dependent on the other available colours and B
-    // Brute force: Calculate every possible ordering
-    // Dynamic programming: Every possible 2 ordering, every possible 3 ordering, etc. -> Every possible ordering will have sub problem repetitions
-    // How do I store this sub result? The best possible 3 ordering may be a sub optimal N ordering
-    // Generic problem: The contrast is a distance between two colours. I want to maximize the smallest distance between adjacent points.
-    // But is it a distance between N colours? Triangle inequality?
-    // https://cs.stackexchange.com/questions/22767/choosing-a-subset-to-maximize-the-minimum-distance-between-points
-    // https://math.stackexchange.com/questions/339649/maximizing-distance-between-points
-    // Graph?
-}
+function findHighContrastOrder(colours) {
+    // Sort by luminance, then interleave to achieve a high contrast ordering of the colours
+    // EVEN: Lightest colour first
+    // ODD: Middle colour first
 
+    luminance = colours.map(c => chroma(c).luminance())
 
-function findBestPairs(colours, contrastMatrix) {
+    coloursByLuminance = dsu(colours, luminance)
+    midpoint = Math.floor(coloursByLuminance.length / 2)
     
-    let numColors = colours.length
-    for (let r = 0; r < numColors; r++) {
-        row_colours_sorted = dsu(colours, contrastMatrix[r])
-        console.log(row_colours_sorted)
+    interleaved = []
+
+    if (coloursByLuminance.length % 2 != 0) {
+        interleaved.push(coloursByLuminance[midpoint])
+        midpoint += 1
     }
 
-    // Return tuples of colours sorted from highest contrast to lowest contrast
+    for (let offset = 0; offset < Math.floor(coloursByLuminance.length / 2); offset++) {
+        interleaved.push(coloursByLuminance[offset])
+        interleaved.push(coloursByLuminance[midpoint + offset])
+    }
+
+    return interleaved
 }
 
 function displayContrastMatrix(colours, contrast_matrix, element) {
+    highContrast = 3
+
+    mediumContrast = 2.5
+
 
     num_colors = contrast_matrix.length
     table = document.createElement("table")
@@ -77,8 +79,18 @@ function displayContrastMatrix(colours, contrast_matrix, element) {
         for (let j = 0; j < num_colors; j++) {
 
             block = document.createElement("td")
-            block.backgroundColor = colours[i]
-            block.textContent = contrast_matrix[i][j].toPrecision(3)
+            contrast = contrast_matrix[i][j]
+            if (contrast >= highContrast) {
+                block.classList.add("highContrast");
+            }
+            else if (contrast >= mediumContrast) {
+                block.classList.add("moderateContrast");
+            }
+            else {
+                block.classList.add("lowContrast");
+            }
+
+            block.textContent = contrast.toPrecision(3)
             row.appendChild(block)
 
         }
