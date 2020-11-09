@@ -14,16 +14,53 @@
             <p>This tool generates a matrix of colour contrast for the provided colours as defined by WCAG 2.1. Powered by <a href="https://gka.github.io/chroma.js/">chroma.js.</a></p>
         </div>
         <main class="container">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="background">Background Colour</label>
+                            <input type="text" class="form-control" id="background" value="#FFFFFF"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="foreground">Text Colour</label>
+                            <input type="text"  class="form-control" id="foreground" value="#000000"/>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="form-group col">
+                        <label for="colour-entry">Main Palette Colours, comma separated; Hex or CSS named colour</label>
+                        <textarea class="form-control" id="colour-entry" placeholder="#000000,chartreuse" rows="3" aria-label="Colour Entry"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <div class="form-check">                            
+                            <input type="checkbox" id="interleave" checked="checked" class="form-check-input" />
+                            <label for="interleave" class="form-check-label">Interleave palette for high contrast</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="btn btn-primary" id="submit-button">Generate Contrast Matrix</span>
+                    </div>
+                </div>
+
+            </form>
             
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="colour-entry" placeholder="Enter comma separated colours: #000000,chartreuse" aria-label="Colour Entry">
-                <div class="input-group-append">
-                  <button class="input-group-text" id="submit-button">Generate Contrast Matrix</span>
+            <div class="container">
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div id="contrast-table" class="table col"></div>
                 </div>
             </div>
-
-
-            <div id="contrast-table"></div>
             
         </main>
         <script>
@@ -33,13 +70,17 @@
                 coloursString = document.getElementById("colour-entry").value
                 colours = coloursString.replace(/\"|\[|\]/g, " ").split(",")
                 colours = colours.map(e => e.trim())
-                ordered = findHighContrastOrder(colours)
+                
+                shouldInterleave = document.getElementById("interleave").checked
+                if (shouldInterleave) {
+                    colours = findHighContrastOrder(colours)
+                }
                 //colours = ["#005172", "#D4F880", "#FFFFFF", "#000000"]
                 
-                ordered.push("#FFFFFF")
-                ordered.push("#000000")
-                matrix = createContrastMatrix(ordered)
-                displayContrastMatrix(ordered, matrix, block)
+                colours.push(document.getElementById("background").value)
+                colours.push(document.getElementById("foreground").value)
+                matrix = createContrastMatrix(colours)
+                displayContrastMatrix(colours, matrix, block)
                 
 
             }
