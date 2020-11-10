@@ -36,14 +36,14 @@
                     
                     <div class="form-group col">
                         <label for="colour-entry">Main Palette Colours, comma separated; Hex or CSS named colour</label>
-                        <textarea class="form-control" id="colour-entry" placeholder="#000000,chartreuse" rows="3" aria-label="Colour Entry"></textarea>
+                        <textarea class="form-control" id="colour-entry" rows="3" aria-label="Colour Entry">#a6cee3, #1f78b4, #b2df8a, #33a02c, #fb9a99</textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col">
                         <div class="form-check">                            
                             <input type="checkbox" id="interleave" checked="checked" class="form-check-input" />
-                            <label for="interleave" class="form-check-label">Interleave palette for high contrast</label>
+                            <label for="interleave" class="form-check-label">Re-order for higher contrast between adjacent colours</label>
                         </div>
                     </div>
                 </div>
@@ -59,6 +59,12 @@
                 <div class="row">&nbsp;</div>
                 <div class="row">
                     <div id="contrast-table" class="table col"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="colour-output">Re-ordered colours</label>
+                        <textarea class="form-control" id="colour-output"></textarea>
+                    </div>
                 </div>
             </div>
             
@@ -76,14 +82,15 @@
                     colours = findHighContrastOrder(colours)
                 }
                 //colours = ["#005172", "#D4F880", "#FFFFFF", "#000000"]
-                
+                document.getElementById("colour-output").value = colours.join()
                 colours.push(document.getElementById("background").value)
                 colours.push(document.getElementById("foreground").value)
                 matrix = createContrastMatrix(colours)
                 displayContrastMatrix(colours, matrix, block)
                 
-
             }
+
+            button.click()
         </script>
     </body>
 </html>
