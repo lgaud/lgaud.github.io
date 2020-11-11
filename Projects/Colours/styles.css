@@ -1,0 +1,15 @@
+.highContrast {
+    font-weight: bold;
+    color: rgb(6, 66, 6);
+    background-color: rgb(164, 252, 164);
+}
+
+.moderateContrast {
+    font-weight: bold;
+    color: rgb(6, 66, 6);
+}
+
+.lowContrast {
+    color: rgb(66, 6, 6);
+    background-color: rgb(252, 164, 164);    
+}

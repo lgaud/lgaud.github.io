@@ -1,0 +1,2 @@
+# Colour Contrast Matrix Generator
+There are many factors that come into play when selecting colour palettes for visualization. This tool is inspired by the tool [Viz Palette](https://projects.susielu.com/viz-palette) by Susie Lu and Elijah Meeks, and provides help with ordering palettes so that adjacent areas are high contrast to each other, for example, stacked bars, stacked areas, or pie charts.

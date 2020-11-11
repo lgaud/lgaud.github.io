@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+        <script src="contrast.js"></script>
+        <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-4">Colour Contrast Matrix Generator</h1>
+            <p class="lead">Identify which colours in your palette are high contrast with each other to help create accessible designs and visualizations.</p>
+            <p>This tool generates a matrix of colour contrast for the provided colours as defined by WCAG 2.1. Powered by <a href="https://gka.github.io/chroma.js/">chroma.js.</a></p>
+            <p>Mainly intended to help with categorical palettes with adjacent areas, this is also useful any time you'd like to check the contrast of multiple colours at once. For help with adapting your colours to a sequential or diverging palette, check out <a href="https://gka.github.io/palettes/">Chroma.js Color Palette Helper</a>.</p>
+        </div>
+        <main class="container">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="background">Background Colour</label>
+                            <input type="text" class="form-control" id="background" value="#FFFFFF"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="foreground">Text Colour</label>
+                            <input type="text"  class="form-control" id="foreground" value="#000000"/>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="form-group col">
+                        <label for="colour-entry">Main Palette Colours, comma separated; Hex or CSS named colour</label>
+                        <textarea class="form-control" id="colour-entry" rows="3" aria-label="Colour Entry">#a6cee3, #1f78b4, #b2df8a, #33a02c, #fb9a99</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <div class="form-check">                            
+                            <input type="checkbox" id="interleave" checked="checked" class="form-check-input" />
+                            <label for="interleave" class="form-check-label">Re-order for higher contrast between adjacent colours</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="btn btn-primary" id="submit-button">Generate Contrast Matrix</span>
+                    </div>
+                </div>
+
+            </form>
+            
+            <div class="container">
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div id="contrast-table" class="table col"></div>
+                </div>
+                <div class="row">
+                    <h3 class="col">Sample Charts</h2>
+                </div>
+                <div class="row">
+                    <div class="col" id="pieChart"></div>
+                    <div class="col" id="barChart"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="colour-output">Re-ordered colours</label>
+                        <textarea class="form-control" id="colour-output"></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </main>
+        <script>
+            button = document.getElementById("submit-button")
+
+            function makePlots(colours) {
+                pieValues = []
+                barTraces = []
+                barLabels = ["A", "B", "C"]
+                for (let i=0; i < colours.length; i++) {
+                    pieValues.push(Math.random())
+                    
+                    barValues =[Math.random(), Math.random(), Math.random()]
+    
+                    barTraces.push({
+                        x: barLabels,
+                        y: barValues,
+                        name: colours[i],
+                        marker: {
+                            color: colours[i]
+                        },
+                        type: "bar"
+                    })
+                }
+
+                // sort pie values
+                pieValues.sort((a, b) => b-a)
+
+                var pieData = [{
+                values: pieValues,
+                labels: colours,
+                type: 'pie',
+                marker: {
+                    colors: colours
+                }
+                }];
+
+                var layout = {
+                height: 400,
+                width: 500
+                };
+
+                Plotly.newPlot('pieChart', pieData, layout);
+
+                layout['barmode'] = 'stack'
+                Plotly.newPlot('barChart', barTraces, layout)
+            }
+
+            button.onclick = function() {
+                block = document.getElementById("contrast-table")
+                coloursString = document.getElementById("colour-entry").value
+                colours = coloursString.replace(/\"|\[|\]/g, " ").split(",")
+                colours = colours.map(e => e.trim())
+                
+                shouldInterleave = document.getElementById("interleave").checked
+                if (shouldInterleave) {
+                    colours = findHighContrastOrder(colours)
+                }
+                //colours = ["#005172", "#D4F880", "#FFFFFF", "#000000"]
+                document.getElementById("colour-output").value = colours.join()
+                makePlots(colours)
+                colours.push(document.getElementById("background").value)
+                colours.push(document.getElementById("foreground").value)
+                matrix = createContrastMatrix(colours)
+                displayContrastMatrix(colours, matrix, block)  
+                        
+            }
+
+            button.click()
+        </script>
+    </body>
+</html>
