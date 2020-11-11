@@ -1,13 +1,12 @@
-# Apps
-
-## OC Trainsfer
-## Make transfering from the train less of a pain!
-[![OC Trainsfer Logo](images/Feature.png "OC Trainsfer")](OCTrainsfer)
-
 # Projects
 ## Colour Contrast Matrix Generator
 Generate a colour contrast matrix for an entire colour palette, ideal for checking categorical colour palettes for more accessible visualization.
 - [Web Page](Projects/Colours/contrast_matrix.html)
+
+## OC Trainsfer App
+React Native app available on Google Play to make transfering from the train less of a pain!
+
+[![OC Trainsfer Logo](images/Feature_small.png "OC Trainsfer")](OCTrainsfer)
 
 ## How fast am I?
 Visualization using Plotly.js to compare running race times
