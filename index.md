@@ -38,9 +38,5 @@ Data analysis in Python with pandas, graph using matplotlib, and then an attempt
 
 ## Thesis Word Count
 Word counting in Python/Spark, using my Masters and Honours theses, with visualization in d3.js.
-- [Web Page](wordCountVisualization.html)
+- [Web Page](Projects/wordCountVisualization.html)
 - [Repo](https://github.com/lgaud/WordCountVisualization)
-
-## Colour Contrast Matrix Generator
-Generate a colour contrast matrix for an entire colour palette, ideal for checking categorical colour palettes for more accessible visualization.
-- [Web Page](Projects/Colours/contrast_matrix.html)
