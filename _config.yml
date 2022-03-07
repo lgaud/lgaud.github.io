@@ -1,11 +1,10 @@
 title: Lisa Gaudette # your name (or website title) here
 #logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Welcome to the home of my side projects!
+  Software Developer / Data Scientist, now founder of <a href="https://www.plankido.com/">Plankido.com</a>
   <hr>
-  <p class="view"><a href="OCTrainsfer">OC Trainsfer App</a></p>
-  <p class="view"><a href="Projects">Other Projects</a></p>
-  <p class="view"><a href="https://www.linkedin.com/in/lisagaud/">View My LinkedIn Profile</a></p>
+  <p class="view"><a href="OCTrainsfer">(Archived) OC Trainsfer App</a></p>
+  <p class="view"><a href="Projects">Side Projects</a></p>
 
 show_downloads: false
 theme: jekyll-theme-minimal
