@@ -5,3 +5,12 @@ description: > # your text below (remove <br> elements if you don't need line br
 
 show_downloads: false
 theme: minima
+
+header_pages: []
+
+
+minima:
+  social_links:
+    twitter: lisa_gaud
+    github: lgaud
+    linkedin: lisagaud
