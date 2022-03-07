@@ -6,4 +6,4 @@ description: > # your text below (remove <br> elements if you don't need line br
   <p class="view"><a href="Projects">Side Projects</a></p>
 
 show_downloads: false
-theme: jekyll-theme-minimal
+theme: minima
