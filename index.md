@@ -1,42 +1,19 @@
-# Projects
-## Colour Contrast Matrix Generator
-Generate a colour contrast matrix for an entire colour palette, ideal for checking categorical colour palettes for more accessible visualization.
-- [Web Page](Projects/Colours/contrast_matrix.html)
+# Lisa Gaudette - Indie Founder and Software Developer
+Hi, I'm Lisa. I've been in software and data science for over a decade, and now I'm branching out on my own. You can find me on Twitter at [@lisa_gaud](https://twitter.com/lisa_gaud) or on [LinkedIn](https://www.linkedin.com/in/lisagaud/) 
 
-## OC Trainsfer App
-React Native app available on Google Play to make transfering from the train less of a pain!
+## Current Project
+I am currently working on building [Plankido.com](https://www.plankido.com) to serve online fitness creators selling fitness programs. 
+As part of that I've built [Workout Loop](https://www.plankido.com/loop) which lets people easily create and share fitness programs made using YouTube videos. 
+Here's an example of [Short Workouts to build and maintain a habit](https://www.plankido.com/posts/short_workouts_to_build_habit/).
+
+## Side Projects
+I have a variety of small side projects in the [Side Projects](Projects/index.html) section. This includes several data analysis and visualization projects, 
+as well as the [Color Contrast Matrix](Projects/Colours/contrast_matrix.html) tool to generate a colour contrast matrix for an entire colour palette, ideal for checking categorical colour palettes for more accessible visualization.
+
+## Past Projects 
+### OC Trainsfer App (Archived)
+When our new Light Rail system was launched, I wanted to be able to check which bus stop to go to to get me home fastest. So I made a React Native app!
+However, the API information was not very useful when the buses were at their first stop, and combined with me not taking transit due to now working from home
+I discontinued this app.
 
 [![OC Trainsfer Logo](images/Feature_small.png "OC Trainsfer")](OCTrainsfer)
-
-## How fast am I?
-Visualization using Plotly.js to compare running race times
-- [Web Page](Projects/Running/index.html)
-- [Repo](https://github.com/lgaud/RunningComparison/)
-
-## Datashader Talk
-Notebook used during a lightning talk about Datashader delivered at Ottawa Python Meetup in Nov 2018.
-- [Jupyter Notebook](http://nbviewer.jupyter.org/github/lgaud/datashader-demo/blob/master/DataShader%20Quick%20Overview.ipynb)
-
-## Where's My Bus?
-Data gathering and analysis to demonstrate how unreliable my bus home is.
-- [Jupyter Notebook](https://github.com/lgaud/wheres-my-bus/blob/master/Bus%20Analysis.ipynb)
-- [Repo](https://github.com/lgaud/wheres-my-bus/)
-
-## Nutrient Density
-Data analysis in Python with pandas, and visualization in d3.js.
-- [Web Page](Projects/Foods/index.html)
-- [Repo](https://github.com/lgaud/NutrientDensity)
-
-## Tensorflow Tutorial Notes
-My notes and enhancements of a the "Deep MMIST for Experts" Tensorflow Tutorial. I made the network considerably smaller to train on a laptop CPU.
-- [Jupyter Notebook](https://github.com/lgaud/ml-tutorials/blob/master/Lobotomized%20Deep%20MNIST%20for%20Experts%20Tutorial.ipynb)
-
-## Most controversial Subreddits
-Data analysis in Python with pandas, graph using matplotlib, and then an attempt at prediction using sklearn. The visualization script was featured in a Kaggle newsletter.
-- [Kaggle Script - Visualization](https://www.kaggle.com/lgaudette/d/reddit/reddit-comments-may-2015/most-controversial-subreddits/code)
-- [Kaggle Script - Prediction](https://www.kaggle.com/lgaudette/d/reddit/reddit-comments-may-2015/controversial)
-
-## Thesis Word Count
-Word counting in Python/Spark, using my Masters and Honours theses, with visualization in d3.js.
-- [Web Page](Projects/wordCountVisualization.html)
-- [Repo](https://github.com/lgaud/WordCountVisualization)
