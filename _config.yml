@@ -1,9 +1,7 @@
 title: Lisa Gaudette # your name (or website title) here
 #logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Software Developer / Data Scientist, now founder of <a href="https://www.plankido.com/">Plankido.com</a>
-  <hr>
-  <p class="view"><a href="Projects">Side Projects</a></p>
+  Software Developer / Data Scientist, now founder of Plankido.com<
 
 show_downloads: false
 theme: minima

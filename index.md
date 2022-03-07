@@ -1,4 +1,3 @@
-# Lisa Gaudette
 ## *Indie Founder and Software Developer*
 Hi, I'm Lisa. I've been in software and data science for over a decade, and now I'm branching out on my own as a solopreneur. You can find me on Twitter at [@lisa_gaud](https://twitter.com/lisa_gaud) or on [LinkedIn](https://www.linkedin.com/in/lisagaud/).
 
@@ -16,7 +15,3 @@ as well as the [Color Contrast Matrix](Projects/Colours/contrast_matrix.html) to
 When our new Light Rail system was launched, I wanted to be able to check which bus stop to go to to get me home fastest. So I made a React Native app called [OC Trainsfer](OCTrainsfer)!
 However, the API information was not very useful when the buses were at their first stop, and combined with me not taking transit due to now working from home
 I discontinued this app.
-
-<!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="JSREMGFR" defer></script>
-<!-- / Fathom -->
