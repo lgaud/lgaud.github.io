@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Alpine.js drag and drop with Bootstrap 5"
+description: An example of Alpine.js drag and drop using Bootstrap 5 CSS. Most examples use Tailwind but the details of the CSS positioning are important!
 tag: alpine.js
 ---
 
