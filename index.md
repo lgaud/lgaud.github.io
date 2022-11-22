@@ -3,7 +3,7 @@ Hi, I'm Lisa. I've been in software and data science for over a decade.
 
 I've been exploring my entrepreneurial side lately, but I'd love to help you put the pieces together on a freelance, contract, or part time basis. I can help you leverage Azure Cognitive Services and Search and integrate these tools with your applications and other APIs.
 
-You can find me on Twitter at [@lisa_gaud](https://twitter.com/lisa_gaud) or on [LinkedIn](https://www.linkedin.com/in/lisagaud/).
+You can find me on [LinkedIn](https://www.linkedin.com/in/lisagaud/).
 
 ## Current Projects: 
 ### [PyNotion.com](https://www.pynotion.com/)
