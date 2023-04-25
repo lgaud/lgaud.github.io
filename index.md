@@ -25,7 +25,7 @@ as well as the [Color Contrast Matrix](Projects/Colours/contrast_matrix.html) to
 ## Past Projects
 
 ### Plankido
-[Plankido]((https://www.plankido.com/) was my first SaaS idea, a platform for fitness professionals selling online workout programs. I started building a Django web app while looking for customers, and found it to be a hard to reach niche that I didn't feel was a great fit for me (aka bad founder market fit).
+[Plankido](https://www.plankido.com/) was my first SaaS idea, a platform for fitness professionals selling online workout programs. I started building a Django web app while looking for customers, and found it to be a hard to reach niche that I didn't feel was a great fit for me (aka bad founder market fit).
 
 ### Video Scheduler
 [Plankido Video Scheduler](https://www.plankido.com/video_scheduler) was a paid app on the Wix App Market, based on Workout Loop, with the tagline "Better than a playlist for workouts and more". This enabled creators to make programs of videos for their visitors to come back to over several days. I gained experience with all aspects of launching and promoting an app. It got over 50 trials, but lack of initial traction combined with some changes to Wix policies led me to conclude it wasn't viable.
