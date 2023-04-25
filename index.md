@@ -1,16 +1,20 @@
 ## *Indie Founder and Software Developer*
 Hi, I'm Lisa. I've been in software and data science for over a decade.
 
+I am currently available for freelance opportunities to help you build early stage ML & data driven products. I work mostly with Python and Azure cloud; I can build a prototype independently but also thrive in a team.
+
 You can find me on [LinkedIn](https://www.linkedin.com/in/lisagaud/).
 
 ## Current Projects: 
+### [Not So Rigid Designer](https://designer.notsorigidweaver.com/)
+I picked up weaving on a rigid heddle loom as a hobby during the pandemic, which led to blogging about it, which led to tinkering with some design software for it. I am currently in a beta phase for this very niche SaaS app.
+
+### [Workout Loop](https://www.plankido.com/loop)
+[Workout Loop](https://www.plankido.com/loop) lets you easily create and share fitness programs made using YouTube videos. 
+Here's an example of [Short Workouts to build and maintain a habit](https://www.plankido.com/posts/short_workouts_to_build_habit/). I started it as part of my marketing strategy for a larger tool for fitness professionals that I've since decided isn't the right product for me, but Workout Loop is still useful!
+
 ### [PyNotion.com](https://www.pynotion.com/)
 I've been diving into the Notion API and writing tutorials using the API with Python.
-
-### [Plankido.com](https://www.plankido.com)
-I am currently working on building [Plankido.com](https://www.plankido.com) to serve online fitness creators selling workout programs. 
-As part of that I've built [Workout Loop](https://www.plankido.com/loop) which lets people easily create and share fitness programs made using YouTube videos. 
-Here's an example of [Short Workouts to build and maintain a habit](https://www.plankido.com/posts/short_workouts_to_build_habit/).
 
 ## Side Projects
 I have a variety of small side projects in the [Side Projects](Projects/index.html) section. This includes several data analysis and visualization projects, 
