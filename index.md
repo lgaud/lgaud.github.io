@@ -23,6 +23,8 @@ I have a variety of small side projects in the [Side Projects](Projects/index.ht
 as well as the [Color Contrast Matrix](Projects/Colours/contrast_matrix.html) tool to generate a colour contrast matrix for an entire colour palette, ideal for checking categorical colour palettes for more accessible visualization.
 
 ## Past Projects
+
+### Plankido
 [Plankido]((https://www.plankido.com/) was my first SaaS idea, a platform for fitness professionals selling online workout programs. I started building a Django web app while looking for customers, and found it to be a hard to reach niche that I didn't feel was a great fit for me (aka bad founder market fit).
 
 ### Video Scheduler
